@@ -14,13 +14,13 @@ NAME = libftprintf.a
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -I./incs
 
 RM = rm -fr
 
-SRCS = ft_printfhexacase.c ft_printfputnbr.c\
+SRCS = $(addprefix srcs/, ft_printfhexacase.c ft_printfputnbr.c\
 ft_printf.c ft_printfhexapointer.c ft_printfputstr.c\
-ft_printfdecimal.c ft_printfputchar.c
+ft_printfdecimal.c ft_printfputchar.c)
 
 OBJS = ${SRCS:.c=.o}
 
